@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <dimen name="textWidth">160dp</dimen>
-    <dimen name="textHeight">wrap_content</dimen>
     <dimen name="fontSize">24sp</dimen>
 
 </resources>
