@@ -13,45 +13,51 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Please Select A Story"
         android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/storyOne"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/storyOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginEnd="156dp"
         android:layout_marginBottom="100dp"
         android:text="Story One"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:onClick="storyOne"
+        app:layout_constraintBottom_toTopOf="@+id/storyTwo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/storyTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="149dp"
         android:layout_marginEnd="156dp"
         android:layout_marginBottom="100dp"
         android:text="Story Two"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        android:onClick="storyTwo"
+        app:layout_constraintBottom_toTopOf="@+id/storyThree"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/storyThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="160dp"
         android:text="Story Three"
+        android:onClick="storyTwo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
