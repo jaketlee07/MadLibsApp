@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class CreatedStory extends AppCompatActivity {
-
+public class CreatedStory2 extends AppCompatActivity {
     public static final String TEXT1 = "text1";
     public static final String TEXT2 = "text2";
     public static final String TEXT3 = "text3";
@@ -24,7 +23,7 @@ public class CreatedStory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_created_story);
+        setContentView(R.layout.activity_created_story2);
 
         Intent intent = getIntent();
 
@@ -41,12 +40,11 @@ public class CreatedStory extends AppCompatActivity {
         String text11 = intent.getStringExtra(TEXT11);
         String text12 = intent.getStringExtra(TEXT12);
 
-        String strToDisplay = "Pizza was invented by a " + text1 + " " + text2 +
-                " chef named " + text3 + ". To make a pizza you need to take a lump of " + text4 +
-                ", and make a thin round " + text5 + " " + text6 + ". Then you cover it with " + text7 +
-                " sauce, " + text8 + " cheese, and fresh chopped " + text9 +
-                ". Next you have to bake it in a very hot " + text10 + ". When it is done, cut it into " +
-                text11 + " " + text12 +  ".";
+        String strToDisplay = "Schools are closed at Easter time and all the " + text1 + " get " + text2 + " weeks off. The " +
+                text3 + "teachers also get a vacation. There are alot of things to do on Easter Vacation. Some kids hang around and watch the " +
+                text4 + ". Others go outside and play " + text5 + ". Little kids will color " + text6 + " eggs. The use a package of "+
+                text7 + " dye. They pour it in a bowl full of " + text8 + ". Then they dip the " + text9 + " in the bowl and then rinse it off. After the " +
+                text10 + " are dried, you place them in the Easter" + text11 + " along with a " + text12 + " chocolate bunny!";
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
     }

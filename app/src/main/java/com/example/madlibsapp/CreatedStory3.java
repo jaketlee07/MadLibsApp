@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class CreatedStory extends AppCompatActivity {
+public class CreatedStory3 extends AppCompatActivity {
 
     public static final String TEXT1 = "text1";
     public static final String TEXT2 = "text2";
@@ -19,12 +19,11 @@ public class CreatedStory extends AppCompatActivity {
     public static final String TEXT9 = "text9";
     public static final String TEXT10 = "text10";
     public static final String TEXT11 = "text11";
-    public static final String TEXT12 = "text12";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_created_story);
+        setContentView(R.layout.activity_created_story3);
 
         Intent intent = getIntent();
 
@@ -39,14 +38,12 @@ public class CreatedStory extends AppCompatActivity {
         String text9 = intent.getStringExtra(TEXT9);
         String text10 = intent.getStringExtra(TEXT10);
         String text11 = intent.getStringExtra(TEXT11);
-        String text12 = intent.getStringExtra(TEXT12);
 
-        String strToDisplay = "Pizza was invented by a " + text1 + " " + text2 +
-                " chef named " + text3 + ". To make a pizza you need to take a lump of " + text4 +
-                ", and make a thin round " + text5 + " " + text6 + ". Then you cover it with " + text7 +
-                " sauce, " + text8 + " cheese, and fresh chopped " + text9 +
-                ". Next you have to bake it in a very hot " + text10 + ". When it is done, cut it into " +
-                text11 + " " + text12 +  ".";
+        String strToDisplay = text1 + ", " + text2 + " years old was recently exposed for murder. On " + text3 +
+                " of last week, " + text1 + " was caught by the " + text4 + " police at " + text5 + "'s " +
+                text6 + " house. " + text1 + " was found with " + text7 + " blood on their hands. The murder weapon used was a " +
+                text8 + " " + text9 + " which was stolen from teh local Walmart. It is reported that " + text1 +
+                " is setenced for " + text10 + " years in the " + text11 + " jail.";
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
     }

@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity
     }
     public void storyTwo(View v)
     {
-        Intent intent = new Intent(this, StoryOne.class);
+        Intent intent = new Intent(this, StoryTwo.class);
 
         startActivity(intent);
     }
     public void storyThree(View v)
     {
-        Intent intent = new Intent(this, StoryOne.class);
+        Intent intent = new Intent(this, StoryThree.class);
 
 
         startActivity(intent);

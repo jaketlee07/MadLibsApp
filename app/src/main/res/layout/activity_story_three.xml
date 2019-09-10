@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StoryOne">
+    tools:context=".StoryThree">
 
     <TextView
         android:id="@+id/textView"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="0"
-        android:text="Adjective"
+        android:text="Person's Name"
         android:textSize="@dimen/fontSize" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_row="1"
         android:layout_column="0"
-        android:text="Nationality"
+        android:text="Number"
         android:textSize="@dimen/fontSize" />
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_row="2"
         android:layout_column="0"
-        android:text="Person's Name"
+        android:text="Day of The Week"
         android:textSize="@dimen/fontSize"/>
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_row="3"
         android:layout_column="0"
-        android:text="Noun"
+        android:text="Adjective"
         android:textSize="@dimen/fontSize"/>
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_row="4"
         android:layout_column="0"
-        android:text="Adjective"
+        android:text="Celebrity's Name"
         android:textSize="@dimen/fontSize"/>
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_row="5"
         android:layout_column="0"
-        android:text="Noun"
+        android:text="Adjective"
         android:textSize="@dimen/fontSize"/>
 
     <TextView
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_row="6"
         android:layout_column="0"
-        android:text="Adjective"
+        android:text="Color"
         android:textSize="@dimen/fontSize"/>
 
     <TextView
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_row="8"
         android:layout_column="0"
-        android:text="Plural Noun"
+        android:text="Noun"
         android:textSize="@dimen/fontSize"/>
 
     <TextView
@@ -93,26 +93,9 @@
         android:layout_height="wrap_content"
         android:layout_row="9"
         android:layout_column="0"
-        android:text="Noun"
-        android:textSize="@dimen/fontSize"/>
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:layout_row="10"
-        android:layout_column="0"
         android:text="Number"
         android:textSize="@dimen/fontSize"/>
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:layout_row="11"
-        android:layout_column="0"
-        android:text="Shape"
-        android:textSize="@dimen/fontSize"/>
 
     <EditText
         android:id="@+id/editText"
@@ -214,25 +197,6 @@
         android:inputType="textPersonName"
         android:text="" />
 
-    <EditText
-        android:id="@+id/editText11"
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:layout_row="10"
-        android:layout_column="1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
-
-    <EditText
-        android:id="@+id/editText12"
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:layout_row="11"
-        android:layout_column="1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
 
     <Button
         android:id="@+id/button"
@@ -324,31 +288,13 @@
         android:text="Random"
         android:onClick="random10"/>
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_row="10"
-        android:layout_column="2"
-        android:text="Random"
-        android:onClick="random11"/>
-
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_row="11"
-        android:layout_column="2"
-        android:text="Random"
-        android:onClick="random12"/>
 
     <Button
         android:id="@+id/button19"
         android:layout_width="156dp"
         android:layout_height="66dp"
-        android:layout_row="12"
+        android:layout_row="10"
         android:layout_column="1"
         android:onClick="createStory"
         android:text="Create Story" />
-
 </GridLayout>
