@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class CreatedStory3 extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class CreatedStory3 extends AppCompatActivity {
     public static final String TEXT9 = "text9";
     public static final String TEXT10 = "text10";
     public static final String TEXT11 = "text11";
+    String strToDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +41,21 @@ public class CreatedStory3 extends AppCompatActivity {
         String text10 = intent.getStringExtra(TEXT10);
         String text11 = intent.getStringExtra(TEXT11);
 
-        String strToDisplay = text1 + ", " + text2 + " years old was recently exposed for murder. On " + text3 +
+        strToDisplay = text1 + ", " + text2 + " years old was recently exposed for murder. On " + text3 +
                 " of last week, " + text1 + " was caught by the " + text4 + " police at " + text5 + "'s " +
                 text6 + " house. " + text1 + " was found with " + text7 + " blood on their hands. The murder weapon used was a " +
                 text8 + " " + text9 + " which was stolen from teh local Walmart. It is reported that " + text1 +
                 " is setenced for " + text10 + " years in the " + text11 + " jail.";
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
+    }
+    public void share(View v)
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
+        String chooserTitle = getString(R.string.chooser);
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
     }
 }
