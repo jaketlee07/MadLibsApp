@@ -58,4 +58,10 @@ public class CreatedStory3 extends AppCompatActivity {
         Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
         startActivity(chosenIntent);
     }
+    public void goBack(View v)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+
+        startActivity(intent);
+    }
 }

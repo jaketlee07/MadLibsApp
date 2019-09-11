@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class CreatedStory2 extends AppCompatActivity {
@@ -20,6 +21,7 @@ public class CreatedStory2 extends AppCompatActivity {
     public static final String TEXT11 = "text11";
     public static final String TEXT12 = "text12";
 
+    String strToDisplay = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,12 +42,29 @@ public class CreatedStory2 extends AppCompatActivity {
         String text11 = intent.getStringExtra(TEXT11);
         String text12 = intent.getStringExtra(TEXT12);
 
-        String strToDisplay = "Schools are closed at Easter time and all the " + text1 + " get " + text2 + " weeks off. The " +
+        strToDisplay = "Schools are closed at Easter time and all the " + text1 + " get " + text2 + " weeks off. The " +
                 text3 + "teachers also get a vacation. There are alot of things to do on Easter Vacation. Some kids hang around and watch the " +
                 text4 + ". Others go outside and play " + text5 + ". Little kids will color " + text6 + " eggs. The use a package of "+
                 text7 + " dye. They pour it in a bowl full of " + text8 + ". Then they dip the " + text9 + " in the bowl and then rinse it off. After the " +
                 text10 + " are dried, you place them in the Easter" + text11 + " along with a " + text12 + " chocolate bunny!";
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
+    }
+
+    public void share(View v)
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
+        String chooserTitle = getString(R.string.chooser);
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
+    }
+
+    public void goBack(View v)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+
+        startActivity(intent);
     }
 }

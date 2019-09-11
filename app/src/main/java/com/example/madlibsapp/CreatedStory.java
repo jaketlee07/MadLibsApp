@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class CreatedStory extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class CreatedStory extends AppCompatActivity {
     public static final String TEXT11 = "text11";
     public static final String TEXT12 = "text12";
 
+    String strToDisplay = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class CreatedStory extends AppCompatActivity {
         String text11 = intent.getStringExtra(TEXT11);
         String text12 = intent.getStringExtra(TEXT12);
 
-        String strToDisplay = "Pizza was invented by a " + text1 + " " + text2 +
+        strToDisplay = "Pizza was invented by a " + text1 + " " + text2 +
                 " chef named " + text3 + ". To make a pizza you need to take a lump of " + text4 +
                 ", and make a thin round " + text5 + " " + text6 + ". Then you cover it with " + text7 +
                 " sauce, " + text8 + " cheese, and fresh chopped " + text9 +
@@ -49,5 +51,21 @@ public class CreatedStory extends AppCompatActivity {
                 text11 + " " + text12 +  ".";
         TextView str = (TextView) findViewById(R.id.story);
         str.setText(strToDisplay);
+    }
+
+    public void share(View v)
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
+        String chooserTitle = getString(R.string.chooser);
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
+    }
+    public void goBack(View v)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+
+        startActivity(intent);
     }
 }
